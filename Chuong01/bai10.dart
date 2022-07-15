@@ -6,7 +6,6 @@ void main() {
   print(soMuNcuaX2(5, 3));
   print(soMuNcuaX(5, -3));
   print(soMuNcuaX2(5, -3));
-  // print(pow(9, 1 / 2));
 }
 
 // dung pow

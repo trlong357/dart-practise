@@ -4,8 +4,6 @@ void main() {
   print(list);
   list.addAll([34, "this is the last"]);
   print(list);
-  var skip = list.skip(3);
+  var skip = list.skip(3).toList();
   print(skip);
-  var skipWhile = list.skipWhile((value) => value is int);
-  print(skipWhile);
 }

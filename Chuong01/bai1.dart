@@ -30,9 +30,6 @@ int findMaxElement(List<int> list) {
 
 int sumInList2(List<int> list) {
   return list.reduce((value, element) {
-    // print("value: $value");
-    // print("element: $element");
-    // print("---");
     return value + element;
   });
 }
