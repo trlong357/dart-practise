@@ -10,9 +10,9 @@ void main() {
       return element;
   }));
 
-  print(emptyList.reduce(
-    (value, element) => 'abc',
-  ));
+  // print(emptyList.reduce(
+  //   (value, element) => 'abc',
+  // ));
 
   //fold can used in all cases, fold co co gia tri khoi dau
   print(list1.fold(list1[0], (previousValue, element) {

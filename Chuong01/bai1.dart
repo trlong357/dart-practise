@@ -18,9 +18,6 @@ void main() {
 
 int findMaxElement(List<int> list) {
   return list.reduce((value, element) {
-    print("value: $value");
-    print("element: $element");
-    print("---");
     if (value > element) {
       return value;
     } else
