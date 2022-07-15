@@ -9,35 +9,63 @@ void main() {
 
   var list = createList(15);
   print(list);
-  print(sumInList(list));
-  print(sumInList2(list));
+  print(sumInList(15));
+  print(sumInList2(list));  
 
-  var a = [1, 34, 3, 300, 31, 340];
-  print(findMaxElement(a));
+
+  var names = ['truc', "long", "ty"];
+  print(reduceString(names));
 }
 
-int findMaxElement(List<int> list) {
-  return list.reduce((value, element) {
-    if (value > element) {
-      return value;
-    } else
-      return element;
+String reduceString(List<String> list){
+  // #0 : value "FAMILY"        element "truc"
+  // #1 : value "family - TRUC"        element "long"
+  // #2: value "family - truc - LONG"  element "ty"  
+  // #3: value "family - truc - long - TY"
+
+  return list.fold("FAMILY", (value, element) {
+    return value.toLowerCase() + " - " + element.toUpperCase();
   });
+
+  // #1 : value "truc"        element "long"
+  // #2: value "truc - LONG"  element "ty"  
+  // #3: value "truc - long - TY"
+
+  // return list.reduce((value, element) {
+  //   return value.toLowerCase() + " - " + element.toUpperCase();
+  // });
 }
 
 int sumInList2(List<int> list) {
+  // var fold = list.fold(10, (value, element) {
+  //   print("$value - $element");
+  //   return value + element;
+  // });
+  // print("FOld: $fold");
+
   return list.reduce((value, element) {
+    print("$value - $element");
     return value + element;
   });
 }
 
-num sumInList(List list) {
-  num sum = 0;
+int sumInList(int n) {
+  var list = createList(n);
+  int sum = 0;
   list.forEach((element) {
     sum += element;
   });
   return sum;
 }
+
+// IMPLEMENT NGU
+// num sumInList(List list) {
+//   int sum = 0;
+//   list.forEach((element) {
+//     sum += element;
+//   });
+//   return sum;
+// }
 
 List<int> createList(int n) {
   var list = List<int>.empty(growable: true);
@@ -46,6 +74,8 @@ List<int> createList(int n) {
   }
   return list;
 }
+
+
 
 int sumNElement(int n) {
   int sum = 0;
