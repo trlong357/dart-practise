@@ -7,9 +7,33 @@ void main() {
   var list = [24, 45, 23, 13, 43, -12];
   print(timGiaTriXaXNhat(list));
   print(timGiaTriGanNhat(list));
+  print(ThuatToan(list));
+  print(ThuatToan(list, xaNhat: true));
 }
 
-// int ThuatToan(List<int> list, int Function())
+int ThuatToan(List<int> list, {xaNhat = false}) {
+  var tmp = 0;
+  var giaTriGiaiThuat;
+  var xList = list.map((e) {
+    return (e - 15).abs(); // abs = tri tuyet doi
+  }).toList();
+  if (xaNhat) {
+    giaTriGiaiThuat = xList.reduce((value, element) {
+      if (value > element)
+        return value;
+      else
+        return element;
+    });
+  } else
+    giaTriGiaiThuat = xList.reduce((value, element) {
+      if (value < element)
+        return value;
+      else
+        return element;
+    });
+  var kq = list.elementAt(xList.indexOf(giaTriGiaiThuat));
+  return kq;
+}
 // bai155.
 
 int timGiaTriXaXNhat(List<int> list) {
