@@ -51,3 +51,7 @@ int timChuSo(List<int> list) {
   );
   return kq;
 }
+
+// int timChuSoCach2(List<int> list){
+
+// }
