@@ -30,8 +30,6 @@ void kiemTraCacSoNguyenNhoHonN2(List<num> list, int n) {
 void kiemTraCacSoNguyenNhoHonN3(List<num> list, int n) {
   var result = List.empty(growable: true);
   list.reduce((value, element) {
-    // print("ELEMENT: $element");
-    // print("VALUE: $value");
     if (element < n && element % 1 == 0) {
       result.add(element);
       return element;

@@ -15,5 +15,4 @@ class HonSo extends PhanSo {
 
 void main() {
   HonSo a = HonSo(3, 2, 3)..xuat();
-  // HonSo error = HonSo(3, 2, 0)..xuat();
 }

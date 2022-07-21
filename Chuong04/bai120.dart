@@ -4,9 +4,6 @@
 import 'dart:math';
 
 void main() {
-  // print(kiemTraSoChinhPhuong(10));
-
-  // print(kiemTraSoChinhPhuong(9));
   print(danhSachCacSoChinhPhuongNhoHonN(25, kiemTraSoChinhPhuong));
 }
 

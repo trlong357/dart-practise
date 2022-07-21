@@ -15,13 +15,17 @@ void main() {
 void dichChuyen(
   int soDia,
   List<int> nguon,
-  List<int> dich,
   List<int> phu,
+  List<int> dich,
 ) {
   if (soDia > 0) {
-    dichChuyen(soDia - 1, nguon, phu, dich);
+    dichChuyen(soDia - 1, nguon, dich, phu);
     dich.add(nguon.removeLast());
-
-    dichChuyen(soDia - 1, phu, dich, nguon);
+    print("So Dia: $soDia");
+    print("Nguon: $nguon");
+    print("Phu: $phu");
+    print("Dich: $dich");
+    print("----");
+    dichChuyen(soDia - 1, phu, nguon, dich);
   }
 }
