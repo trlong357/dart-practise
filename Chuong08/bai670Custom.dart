@@ -9,6 +9,18 @@ void main() {
   var manHinh1 = ManHinh("LG 34inch", 7000000, 10, "2K", 34);
   var manHinh2 = ManHinh("BenQ 24inch", 2000000, 150, "fullHD", 24);
   var manHinh3 = ManHinh("Dell 31inch", 4000000, 10, "fullHD", 31);
+
+  var gearVN = GearVN();
+  gearVN.kho.addAll([
+    chuot1,
+    chuot2,
+    chuot3,
+    banPhim1,
+    banPhim2,
+    manHinh1,
+    manHinh2,
+    manHinh3
+  ]);
 }
 
 class SanPham {
