@@ -1,7 +1,15 @@
+import 'dart:io';
+
 // 119.Liệt kê tất cả các số nguyên tố nhỏ hơn n.
 void main() {
   // print(kiemTraSoNguyenTo(11));
-  print(listCacSoNguyenToNhoHonN(1000, kiemTraSoNguyenTo));
+  ///print(listCacSoNguyenToNhoHonN(1000, kiemTraSoNguyenTo));
+  ///
+
+  print("Nhap vao 1 so tu nhien: ");
+  final input = int.parse("${stdin.readLineSync(retainNewlines: false)}");
+  print(listCacSoNguyenToNhoHonN(input, kiemTraSoNguyenTo));
+
 }
 
 // b1: kiem tra neu n <= 1 return []
