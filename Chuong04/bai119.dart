@@ -1,7 +1,7 @@
 // 119.Liệt kê tất cả các số nguyên tố nhỏ hơn n.
 void main() {
   // print(kiemTraSoNguyenTo(11));
-  print(listCacSoNguyenToNhoHonN(19, kiemTraSoNguyenTo));
+  print(listCacSoNguyenToNhoHonN(1000, kiemTraSoNguyenTo));
 }
 
 // b1: kiem tra neu n <= 1 return []

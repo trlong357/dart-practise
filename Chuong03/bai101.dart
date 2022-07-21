@@ -23,6 +23,19 @@ void inNgay(int thang, int nam) {
 void main() {
   inNgay(2, 2020);
   inNgay(2, 2021);
+  inNgay(2, 2022);
+  inNgay(2, 2023);
+  inNgay(2, 2024);
+
+  print('Truc: ${daysInMonth(DateTime(2024, 2))}');
+
   inNgay(5, 2022);
   inNgay(8, 2022);
+}
+
+
+int daysInMonth(DateTime date){
+  var firstDayThisMonth = new DateTime(date.year, date.month, date.day);
+  var firstDayNextMonth = new DateTime(firstDayThisMonth.year, firstDayThisMonth.month + 1, firstDayThisMonth.day);
+  return firstDayNextMonth.difference(firstDayThisMonth).inDays;
 }

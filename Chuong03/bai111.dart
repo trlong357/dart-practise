@@ -7,13 +7,13 @@ import 'dart:io';
 
 void main() {
   // print(8 ~/ 2);
-  tamGiacCanDac(4);
+  tamGiacCanDac(9);
   print("------");
-  tamGiacCanRong(4);
+  tamGiacCanRong(9);
   print("------");
-  tamGiacVuongCanDac(4);
+  tamGiacVuongCanDac(9);
   print("------");
-  tamGiacVuongCanRong(4);
+  tamGiacVuongCanRong(9);
 }
 
 void tamGiacCanDac(int h) {
@@ -67,17 +67,21 @@ void tamGiacVuongCanDac(int h) {
 void tamGiacVuongCanRong(int h) {
   for (int i = 0; i < h; i++) {
     for (int j = 0; j < i + 1; j++) {
-      if (i == h - 1) break;
-      if (j == 0 || j == i) {
+      // if (i == h - 1) break;
+      if ((i == h - 1) || (j == 0 || j == i)) {
         stdout.write(" * ");
       } else
         stdout.write("   ");
     }
-    if (i == h - 1) {
-      for (int j = 0; j < i + 1; j++) {
-        stdout.write(" * ");
-      }
-    }
+    
+    // if (i == h - 1) {
+      
+    // }
     print("");
   }
+
+  // for (int j = 0; j < h; j++) {
+  //   stdout.write(" * ");
+  // }
+  // print("");
 }

@@ -4,7 +4,7 @@
 import 'dart:math';
 
 void main() {
-  print(danhSachCacSoChinhPhuongNhoHonN(25, kiemTraSoChinhPhuong));
+  print(danhSachCacSoChinhPhuongNhoHonN(16, kiemTraSoChinhPhuong));
 }
 
 bool kiemTraSoChinhPhuong(int n) {
